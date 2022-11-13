@@ -2,10 +2,8 @@ import './bootstrap';
 import '../css/app.css';
 import router from "./routes";
 import { createApp } from 'vue';
-
-import ExampleComponent from './components/ExampleComponent.vue';
-import ExampleComponent2 from "./components/ExampleComponent2.vue";
 import Index from "./Index.vue";
+import Bookables from "./bookables/Bookables.vue";
 
 const app = createApp({});
 
@@ -13,8 +11,6 @@ const app = createApp({});
  * Global components
  */
 app
-    .component('example-component', ExampleComponent)
-    .component('example-component-2', ExampleComponent2)
     .component('index', Index)
 
 /**

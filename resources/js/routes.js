@@ -1,6 +1,6 @@
-import Bookables from "./bookables/Bookables.vue";
-import ExampleComponent2 from "./components/ExampleComponent2.vue";
 import { createRouter ,createWebHistory } from "vue-router";
+import Bookables from "./bookables/Bookables.vue";
+import Bookable from "./bookable/Bookable.vue";
 
 const routes = [
     {
@@ -9,9 +9,9 @@ const routes = [
         name: "home",
     },
     {
-        path: "/contact",
-        component: ExampleComponent2,
-        name: "contact",
+        path: "/bookable/:id",
+        component: Bookable,
+        name: "bookable",
     },
 ];
 
