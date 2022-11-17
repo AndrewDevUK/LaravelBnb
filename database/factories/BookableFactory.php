@@ -2,10 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\Bookable;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Arr;
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Bookable>
+ * @extends Factory<Bookable>
  */
 class BookableFactory extends Factory
 {
@@ -14,7 +15,7 @@ class BookableFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         $suffix = [
             'Villa',

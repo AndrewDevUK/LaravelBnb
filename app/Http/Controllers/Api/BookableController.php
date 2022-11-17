@@ -8,13 +8,15 @@ use App\Http\Resources\BookableShowResource;
 use App\Models\Bookable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class BookableController extends Controller
 {
     /**
-     * @return mixed
+     * @return AnonymousResourceCollection
      */
-    public function index() {
+    public function index(): AnonymousResourceCollection
+    {
         return BookableIndexResource::collection(
             Bookable::all()
         );
@@ -22,9 +24,10 @@ class BookableController extends Controller
 
     /**
      * @param $id
-     * @return mixed
+     * @return BookableShowResource
      */
-    public function show($id) : mixed {
+    public function show($id) : BookableShowResource
+    {
         return new BookableShowResource(Bookable::findOrFail($id));
     }
 }

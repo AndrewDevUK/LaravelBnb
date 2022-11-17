@@ -2,11 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Models\Booking;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Booking>
+ * @extends Factory<Booking>
  */
 class BookingFactory extends Factory
 {
@@ -15,7 +16,7 @@ class BookingFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         $from = Carbon::instance($this->faker->dateTimeBetween("-1 months", "+1 months"));
         $to = (clone $from)->addDays(random_int(0, 14));

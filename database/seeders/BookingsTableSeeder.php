@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Bookable;
 use App\Models\Booking;
+use Exception;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,8 +14,9 @@ class BookingsTableSeeder extends Seeder
      * Run the database seeds.
      *
      * @return void
+     * @throws Exception
      */
-    public function run()
+    public function run(): void
     {
         Bookable::all()->each(function (Bookable $bookable){
             $booking = Booking::factory()->make();
