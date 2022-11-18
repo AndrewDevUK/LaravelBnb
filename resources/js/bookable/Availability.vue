@@ -89,11 +89,3 @@ export default {
     },
 }
 </script>
-
-<style scoped>
-    label {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        font-weight: bolder;
-    }
-</style>
